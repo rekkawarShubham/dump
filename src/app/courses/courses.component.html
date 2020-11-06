@@ -1,0 +1,21 @@
+<h2>Shubham Courses</h2>
+<ul class="courses">
+    <li *ngFor="let course of courses" 
+    [class.selected]="course === selectedCourse"
+    (click)="onSelect(course)"> 
+    <span>{{course.id}}</span>
+    <input [(ngModel)]="course.name" placeholder="name" />        
+    <button (click)="copyMessage(course.name)" value="click to copy" placement="right" ngbTooltip="Copy Value of ID:{{course.id}}" >Copy</button>
+</li>
+<button id="Copybutton" (click)="copyMessages(courses)" value="click to copy" placement="right" ngbTooltip="Copy All Data Masking value">Copy All Data</button>
+<button id="Copybutton" (click)="myfuntion()" >click to create file</button>
+
+</ul>
+<div class="div" [ngStyle]="toogle?minimize:maximize">
+  <button (click)="toogle=!toogle"><span>{{toogle?'+':'-'}}</span></button>
+  <br>
+  <button (click)="loadApplication()">load</button>
+
+</div>
+
+<app-course-detail [course] = "selectedCourse"></app-course-detail>

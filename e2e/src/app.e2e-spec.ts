@@ -10,8 +10,15 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('sample-project app is running!');
+    expect(page.getTitleText()).toEqual('Shubham Courses');
   });
+
+  it('should display Copy all data button', () => {
+    page.navigateTo();
+    expect(page.getCopyContentText()).toEqual('Copy All Data');
+  });
+
+ 
 
   afterEach(async () => {
     // Assert that there are no errors emitted from the browser

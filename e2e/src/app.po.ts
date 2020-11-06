@@ -6,6 +6,9 @@ export class AppPage {
   }
 
   getTitleText(): Promise<string> {
-    return element(by.css('app-root .content span')).getText() as Promise<string>;
+    return element(by.css('app-courses h2')).getText() as Promise<string>;
+  }
+  getCopyContentText(): Promise<string> {
+    return element(by.buttonText('Copy All Data')).getText() as Promise<string>;
   }
 }
