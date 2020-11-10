@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -9,6 +10,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxBootstrapModalComponent } from './ngx-bootstrap-modal/ngx-bootstrap-modal.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { SideComponent } from './side/side.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     CoursesComponent,
     CourseDetailComponent,
     MessagesComponent,
-    NgxBootstrapModalComponent
+    NgxBootstrapModalComponent,
+    SideComponent,
   ],
   imports: [
     BrowserModule,
