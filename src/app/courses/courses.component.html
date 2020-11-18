@@ -9,7 +9,9 @@
 </li>
 <button id="Copybutton" (click)="copyMessages(courses)" value="click to copy" placement="right" ngbTooltip="Copy All Data Masking value">Copy All Data</button>
 <button id="Copybutton" (click)="myfuntion()" >click to create file</button>
-
+<div class="autocomplete" style="width:300px;">
+  <input id="myInput" type="text" name="myCountry" placeholder="Country">
+</div>
 </ul>
 <div class="div" [ngStyle]="toogle?minimize:maximize">
   <button (click)="toogle=!toogle"><span>{{toogle?'+':'-'}}</span></button>
