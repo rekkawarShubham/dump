@@ -1,3 +1,5 @@
+import { HighlightDirective } from './highlight.pipe';
+import { FilterPipe } from './filter.pipe';
 import { showAppComponent } from './courses/show-app.component';
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -14,7 +16,9 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { SideComponent } from './side/side.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CheckoutComponent } from './checkout/checkout.component';
-import {ReactiveFormsModule} from '@angular/forms'
+import {ReactiveFormsModule} from '@angular/forms';
+import { SelectDropdownComponent } from './select-dropdown/select-dropdown.component';
+import { LoginComponent } from './login/login.component'
 
 @NgModule({
   declarations: [
@@ -25,7 +29,11 @@ import {ReactiveFormsModule} from '@angular/forms'
     NgxBootstrapModalComponent,
     SideComponent,
     showAppComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    FilterPipe,
+    SelectDropdownComponent,
+    HighlightDirective,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
