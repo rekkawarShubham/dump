@@ -1,7 +1,8 @@
+import { CollapseModule  } from 'ngx-bootstrap/collapse';
+import {BsDropdownModule} from 'ngx-bootstrap/dropdown'
 import { HighlightDirective } from './highlight.pipe';
 import { FilterPipe } from './filter.pipe';
 import { showAppComponent } from './courses/show-app.component';
-
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -11,14 +12,14 @@ import {FormsModule} from '@angular/forms';
 import { CourseDetailComponent } from './course-detail/course-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NgxBootstrapModalComponent } from './ngx-bootstrap-modal/ngx-bootstrap-modal.component';
-import { ModalModule } from 'ngx-bootstrap/modal';
 import { SideComponent } from './side/side.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CheckoutComponent } from './checkout/checkout.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { SelectDropdownComponent } from './select-dropdown/select-dropdown.component';
-import { LoginComponent } from './login/login.component'
+import { LoginComponent } from './login/login.component';
+import {NavAppComponent} from './navbar/navbar.component';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
   declarations: [
@@ -26,23 +27,25 @@ import { LoginComponent } from './login/login.component'
     CoursesComponent,
     CourseDetailComponent,
     MessagesComponent,
-    NgxBootstrapModalComponent,
-    SideComponent,
+     SideComponent,
     showAppComponent,
     CheckoutComponent,
     FilterPipe,
     SelectDropdownComponent,
     HighlightDirective,
-    LoginComponent
+    LoginComponent,
+    NavAppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     NgbModule,
-    ModalModule.forRoot(),
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CollapseModule.forRoot(),
+    BsDropdownModule.forRoot(),
+    NgSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

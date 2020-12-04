@@ -17,4 +17,10 @@ export class SideComponent implements OnInit {
   openNav(){
     document.getElementById("mySidenav").style.width = "250px";
   }
+  hello(){
+    console.log("hiii");
+  }
+  hello1(){
+    console.log("hiii");
+  }
 }
